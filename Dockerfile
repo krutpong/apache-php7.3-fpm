@@ -96,7 +96,8 @@ RUN sed -i 's/^ServerSignature/#ServerSignature/g' /etc/apache2/conf-enabled/sec
 
 # Install composer
 RUN apt-get install -y zip
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 
 RUN apt-get clean

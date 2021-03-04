@@ -109,6 +109,8 @@ COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD config/index.html /var/www/index.html
 ADD config/index.php /var/www/index.php
 COPY config/apache2.conf /etc/apache2/apache2.conf
+COPY config/php7.3-fpm/php.ini /etc/php/7.3/fpm/php.ini
+
 
 COPY config/apache_enable.sh apache_enable.sh
 RUN chmod 744 apache_enable.sh

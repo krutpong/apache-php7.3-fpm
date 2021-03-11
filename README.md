@@ -1,6 +1,6 @@
-# apache-php7.2-fpm SSL Self-Certificate
+# apache-php7.3-fpm SSL Self-Certificate
 
-This repo is used apache2.4 with PHP version 7.2 on FastCGI service.
+This repo is used apache2.4 with PHP version 7.3 on FastCGI service.
 
 It can support share host you can see in folder sites-available then after run container apache will run command a2ensite * in sites-available.
 I install the basic package like this.
